@@ -1,0 +1,35 @@
+## API
+<table>
+    <thead>
+        <tr>
+            <td>
+                属性
+            </td>
+            <td>
+                说明
+            </td>
+            <td>
+                类型
+            </td>
+            <td>
+                默认值
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                classname
+            </td>
+            <td>
+                设置图标classname按照fontawesome原则设置，若想使用icon组件必须引入fontawesome字体库链接
+            </td>
+            <td>
+                string
+            </td>
+            <td>
+                -
+            </td>
+        </tr>
+    </tbody>
+</table>

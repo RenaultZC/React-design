@@ -1,0 +1,122 @@
+@import '../../style/color.styl';
+
+zero = 0
+
+defaultSize = 14px
+largeSize = 16px
+
+smallHeight = 24px
+largeHeight = 40px
+defaultHeight = 32px;
+
+smallPadding = 7px
+defaultPadding = 15px
+largePadding = 15px
+
+.btn
+    font-size: defaultSize;
+    padding: zero defaultPadding
+    background-color: _white
+    line-height: 1.5rem
+    font-size: defaultSize
+    color: _black
+    outline: none
+    border-radius: 4px
+    border:1px solid _gray
+    position: relative
+    height: defaultHeight
+    transition: .4s
+    cursor: pointer
+    &:after
+        content: ''
+        position: absolute
+        border: zero solid _lightblue
+        display: block
+        border-radius: inherit
+        opacity: 0.4
+        top: zero
+        bottom: zero
+        left: zero
+        right: zero
+    &:hover
+        border-color: _lightblue
+        color: _lightblue
+    &:focus
+        border-color: _lightblue
+        color: _lightblue
+    &:active
+        border-color: _deepblue
+        color: _deepblue
+.dash
+    border-style: dashed
+.primary
+    background-color: _blue
+    color: _white
+    &:hover
+        color: _white
+        background-color: _lightblue
+    &:focus
+        color: _white
+        background-color: _lightblue
+    &:active
+        color: _white
+        background-color: _deepblue
+.danger
+    background-color: _lightgray
+    color: _red
+    border-color: _gray
+    &:after
+        border-color: _red
+    &:hover
+        color: _white
+        background-color: _red
+        border-color: _red
+    &:focus
+        border-color: _red
+        color: _red
+        background-color: _white
+    &:active
+        color: _white
+        border-color: _deepred
+        background-color: _deepred
+.btnClick:after
+    animation: buttonEffect .4s 
+.large
+    height: largeHeight
+    font-size: largeSize
+    padding: zero largePadding
+.small
+    height: smallHeight
+    padding: zero smallPadding
+.disabled
+    background-color: _lightgray
+    color: _gray
+    border-color:_gray 
+    cursor: not-allowed
+    &:hover
+        background-color: _lightgray
+        color: _gray
+        border-color:_gray  
+    &:focus
+        background-color: _lightgray
+        color: _gray
+        border-color:_gray  
+    &:active
+        background-color: _lightgray
+        color: _gray
+        border-color:_gray  
+.loading
+    opacity 0.4
+.block
+    display: block
+    width: 100%
+@keyframes buttonEffect
+
+    to{
+        opacity 0
+        border-width: 6px
+        top: -6px
+        bottom: -6px
+        left: -6px
+        right: -6px
+    }
