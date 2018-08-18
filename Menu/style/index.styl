@@ -1,0 +1,56 @@
+@import '../../style/default.styl';
+
+.triangle
+    width: 5px
+    height: 5px
+    border-width: 0px
+    border-bottom: 3px solid black
+    border-right: 3px solid black
+    display: block
+    position: absolute
+    top: 14px
+    right: 4px
+    transform: rotate(45deg)
+    transition: border-width .4s 
+.clickTriangle
+    border: none
+    border-top: 3px solid black
+    border-left: 3px solid black
+    top: 17px
+
+.menu
+    position: relative
+    display:inline-block
+    cursor: pointer
+    padding: zero 16px 
+    line-height: 40px
+    &:hover,&:hover .triangle,&:focus
+        color: _blue
+        border-color:_blue 
+.list
+    display:none
+    border: 1px solid _gray
+    box-shadow: zero zero 5px _gray
+    position: absolute
+    & p
+        margin: zero 
+        padding: zero 16px 
+        &:active
+            background-color: rgba(24, 144, 255,.1)
+    & a
+        text-decoration: none 
+        color: _black
+        line-height: 40px
+        display: block
+        &:hover
+            color: _blue
+        &:active
+            color: _deepblue
+.listDisplay
+    display: block
+.box
+    display: inline-block
+.disabled
+    cursor: not-allowed
+    & a
+        cursor: not-allowed

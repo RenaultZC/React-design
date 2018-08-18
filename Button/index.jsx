@@ -1,6 +1,6 @@
 import React from 'react';
 import button from './style/index.styl'
-import Icon from '../Icon/index'
+import Icon from '../Icon'
 import classnames from 'classnames'
 
 export default class Button extends React.Component{
@@ -16,10 +16,12 @@ export default class Button extends React.Component{
     }
     componentDidMount = ()=>{
         Object.keys(this.props).forEach((key)=>{
-            if(typeof this.props[key] === 'string'){
-                this.defaultClassName[button[this.props[key]]] = true;
-            }else if(typeof this.props[key] === 'boolean'){
-                this.defaultClassName[button[key]] = true;
+            if(button[this.props[key]]){
+                if(typeof this.props[key] === 'string' && key !== 'string'){
+                    this.defaultClass[button[this.props[key]]] = true;
+                }else if(typeof this.props[key] === 'boolean'){
+                    this.defaultclass[button[key]] = button[key]?this.props[key]:false;
+                }
             }
        });
        if(this.props.disabled){
@@ -43,7 +45,7 @@ export default class Button extends React.Component{
                 }, 600);
             })
         }
-        if(this.props.handle){
+        if(typeof this.props.handle === 'function'){
             this.props.handle();
         }
     }

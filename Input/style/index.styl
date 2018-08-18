@@ -1,0 +1,33 @@
+@import '../../style/default.styl';
+lg = 40px
+sm = 24px
+df = 32px
+dfSize = 14px
+lgSzie = 16px
+zero = 0
+.default
+    width: 100%
+    display: inline-block
+    font-size: dfSize
+    margin: zero 8px 8px zero
+    padding: 4px 11px
+    line-height: 1.5
+    height: df
+    box-sizing: border-box
+    border-radius: 4px
+    border: 1px solid _gray
+    outline: none
+    transition: .4s
+    &:hover
+        border-color: _blue
+    &:focus
+        border-color: _blue
+        box-shadow: zero zero 5px _lightblue
+.lg
+    height: lg
+    font-size: lgSzie
+.sm
+    height: sm
+    padding: 1px 7px
+.disabled
+    cursor: not-allowed

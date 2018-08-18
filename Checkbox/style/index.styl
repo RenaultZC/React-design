@@ -1,0 +1,60 @@
+@import '../../style/default.styl';
+.icon
+    border: 1px solid _gray
+    border-radius: 5px 
+    position: relative
+    &:after
+        content: ''
+        top: zero
+        bottom: zero
+        left: zero
+        right: zero
+        position: absolute
+        border: zero solid _lightblue
+        display: block
+        border-radius: inherit
+        opacity: .4
+    &:before
+        opacity: zero
+        position: absolute
+        top: zero
+        right: zero 
+        left: zero
+        bottom: zero
+        padding-left: 2px
+        padding-top: 1px  
+        border-radius: inherit
+        transform: scale(zero)
+        transition: .4s
+    &:focus-within
+        border-color: _lightblue
+
+.checkClick
+    border-color: _lightblue
+    &:after
+        animation: Click .4s 
+    &:before
+        transform: scale(1)
+        opacity: 1
+        color: _white
+        background-color: _lightblue
+.checkBox
+    opacity: zero
+.label
+    cursor: pointer
+    &:hover .icon
+        border-color: _lightblue
+    &:hover .disabled
+        border-color: _gray
+.disabled
+    border-color: _gray
+    &:before
+        background-color: _lightgray
+        color: _gray
+    &:after
+        border-color: _gray
+    &:focus-within
+        border-color: _gray
+.labeldis
+    color: _gray
+    cursor: not-allowed

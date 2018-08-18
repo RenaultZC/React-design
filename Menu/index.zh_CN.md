@@ -1,0 +1,63 @@
+## API
+<table>
+    <thead>
+        <tr>
+            <td>
+                属性
+            </td>
+            <td>
+                说明
+            </td>
+            <td>
+                类型
+            </td>
+            <td>
+                默认值
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                type
+            </td>
+            <td>
+                active/hover
+            </td>
+            <td>
+                string
+            </td>
+            <td>
+                active
+            </td>
+        </tr>
+    <tbody>
+        <tr>
+            <td>
+                handle
+            </td>
+            <td>
+                触发菜单栏的时候执行回调
+            </td>
+            <td>
+                function
+            </td>
+            <td>
+                -
+            </td>
+        </tr>
+    </tbody>
+</table>
+```jsx
+<Menu title="Navigation One" handle={this.change}>
+    <Menu.Item>
+    <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/">1st menu item</a>
+    </Menu.Item>
+    <Menu.Item>
+    <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">2nd menu item</a>
+    </Menu.Item>
+    <Menu.Item>
+    <a target="_blank" rel="noopener noreferrer" href="http://www.tmall.com/">3rd menu item</a>
+    </Menu.Item>
+</Menu>
+```

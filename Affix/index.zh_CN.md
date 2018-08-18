@@ -19,13 +19,27 @@
     <tbody>
         <tr>
             <td>
-                classname
+                offsetTop
             </td>
             <td>
-                设置图标classname按照fontawesome原则设置
+                距离顶部的高度，不设默认为0
             </td>
             <td>
-                string
+                number
+            </td>
+            <td>
+                -
+            </td>
+        </tr>
+        <tr>
+            <td>
+                handle
+            </td>
+            <td>
+                回调函数，当触发定位和取消定位时执行
+            </td>
+            <td>
+                function 
             </td>
             <td>
                 -

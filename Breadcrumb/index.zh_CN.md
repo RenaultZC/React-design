@@ -19,17 +19,31 @@
     <tbody>
         <tr>
             <td>
-                classname
+                separator
             </td>
             <td>
-                设置图标classname按照fontawesome原则设置
+                分隔符自定义
             </td>
             <td>
                 string
             </td>
             <td>
-                -
+                '/'
             </td>
         </tr>
     </tbody>
 </table>
+
+## 样例
+```jsx
+<Breadcrumb separator="|">
+    <Breadcrumb.Item>Home</Breadcrumb.Item>
+    <Breadcrumb.Item>
+    <a href=''><Icon classname="fa-check"></Icon>Application Center</a>
+    </Breadcrumb.Item>
+    <Breadcrumb.Item>
+    <a href=''><Icon classname="fa-check"></Icon>Application List</a>
+    </Breadcrumb.Item>
+    <Breadcrumb.Item><Icon classname="fa-check"></Icon>An Application</Breadcrumb.Item>
+</Breadcrumb>
+```

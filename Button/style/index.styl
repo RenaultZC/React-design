@@ -1,4 +1,4 @@
-@import '../../style/color.styl';
+@import '../../style/default.styl';
 
 zero = 0
 
@@ -80,7 +80,7 @@ largePadding = 15px
         border-color: _deepred
         background-color: _deepred
 .btnClick:after
-    animation: buttonEffect .4s 
+    animation: Click .4s 
 .large
     height: largeHeight
     font-size: largeSize
@@ -110,13 +110,3 @@ largePadding = 15px
 .block
     display: block
     width: 100%
-@keyframes buttonEffect
-
-    to{
-        opacity 0
-        border-width: 6px
-        top: -6px
-        bottom: -6px
-        left: -6px
-        right: -6px
-    }
