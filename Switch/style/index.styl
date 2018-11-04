@@ -1,0 +1,80 @@
+@import '../../style/default.styl';
+
+zero = 0
+defaultSize = 12px
+defaultWidth = 44px
+defaultHeight = 22px;
+
+.btn
+    width: defaultWidth
+    background-color: _gray
+    line-height: 1.5rem
+    color: _white
+    outline: none
+    border:1px solid _gray
+    position: relative
+    height: defaultHeight
+    transition: .4s
+    border-radius:defaultHeight
+    cursor: pointer
+    &:after
+        content: ''
+        position: absolute
+        border: zero solid _lightblue
+        display: block
+        border-radius: inherit
+        opacity: 0.4
+        top: zero
+        bottom: zero
+        left: zero
+        right: zero
+    &:before
+        content:''
+        position: absolute
+        z-index: 2
+        width: defaultHeight - 4
+        height: defaultHeight - 4
+        background-color: _white
+        top: 1px
+        left: 1px
+        right: inherit
+        border-radius: defaultHeight
+        transition .4s
+    &:active
+        &:before
+            width: defaultHeight*1.1
+.btnClick:after
+    animation: Click .4s
+.btnChecked
+    background-color: _blue
+    border:1px solid _blue
+    &:active
+        &:before
+            width: defaultHeight*1.1
+    &:before
+        content:''
+        left: inherit
+        right: 1px
+.disabled
+    border:1px solid rgba(_gray,0.4)
+    background-color: rgba(_gray,0.4)
+    cursor: default
+    &:active
+        &:before
+            width: defaultHeight - 4
+.disabledChecked
+    background-color: rgba(_blue,0.4)
+    &:active
+        &:before
+            width: defaultHeight - 4
+.font
+    font-size: defaultSize
+    position: absolute
+    left: 55%
+    top: 0
+    overflow: hidden
+    width: defaultSize
+    white-space: nowrap
+    line-height: defaultHeight
+.fontChecked
+    left: 15%

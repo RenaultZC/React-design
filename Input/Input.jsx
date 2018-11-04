@@ -22,16 +22,28 @@ export default class Input extends React.Component{
                 }
             }
        });
+       if(this.props.prefix){
+           this.defaultClass[input.wrapper] = true;
+       }
         this.setState({
             inputClass:classnames(this.defaultClass)
         })
+        this.prefix = this.props.prefix ? <span className={['fa',this.props.prefix,input.prefix].join(' ')}></span> : null;
+        this.width = this.props.style ? this.props.style.width : null;
     }
     onPressEnter=(event)=>{
-        console.log(event)
+        if(event.keyCode === 13){ 
+            if(typeof this.props.handle === 'function'){
+                this.props.handle();
+            }
+        }
     }
     render(){
         return(
-            <input className={this.state.inputClass} placeholder={this.props.placeholder} defaultValue={this.props.string} type='text' onKeyDown={this.onPressEnter}/>
+            <span className={input.bg} style={{width:this.width}}>
+                {this.prefix}
+                <input className={this.state.inputClass} placeholder={this.props.placeholder} defaultValue={this.props.string} style={this.props.style} type='text' onKeyDown={this.onPressEnter}/>
+            </span>
         );
     }
 }

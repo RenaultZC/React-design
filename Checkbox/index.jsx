@@ -7,7 +7,7 @@ export default class Checkbox extends React.Component{
         super(props);
         this.state = {
             iconClass:''
-        }
+        };
         this.icon = null;
         this.iconClick = true;
         this.defaultclassName = {
@@ -47,7 +47,7 @@ export default class Checkbox extends React.Component{
                 this.props.handle();
             }
         }
-    }
+    };
     render(){
         return (
             <label className={[checkbox.label,this.props.disabled?checkbox.labeldis:''].join(' ')}>

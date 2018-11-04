@@ -9,7 +9,6 @@ zero = 0
     width: 100%
     display: inline-block
     font-size: dfSize
-    margin: zero 8px 8px zero
     padding: 4px 11px
     line-height: 1.5
     height: df
@@ -29,5 +28,28 @@ zero = 0
 .sm
     height: sm
     padding: 1px 7px
-.disabled
-    cursor: not-allowed
+.search
+    padding-right: df
+.icon
+    position: absolute
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px
+    color:_black
+    cursor: pointer
+    &:hover
+        color:black
+    &:active
+        color:black
+.bg
+    position: relative
+    display: inline-block
+    width: 100%
+.prefix
+    position: absolute
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px
+    color:_black
+.wrapper
+    padding-left: df

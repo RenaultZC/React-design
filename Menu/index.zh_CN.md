@@ -16,7 +16,7 @@
             </td>
         </tr>
     </thead>
-    <tbody>
+    <tbody/>
         <tr>
             <td>
                 type
@@ -31,7 +31,6 @@
                 active
             </td>
         </tr>
-    <tbody>
         <tr>
             <td>
                 handle

@@ -1,6 +1,5 @@
 ## API
----
-### Input
+### Radio
 <table>
     <thead>
         <tr>
@@ -18,13 +17,13 @@
             </td>
         </tr>
     </thead>
-    <tbody>
+    <tbody/>
         <tr>
             <td>
-                type
+                name
             </td>
             <td>
-                设置输入框大小，有lg（大），sm（小）
+                radio的name属性
             </td>
             <td>
                 string
@@ -35,10 +34,24 @@
         </tr>
         <tr>
             <td>
-                placeholder
+                defaultChecked
             </td>
             <td>
-                设置输入框的提示
+                radio是否被选中
+            </td>
+            <td>
+                boolean
+            </td>
+            <td>
+                false
+            </td>
+        </tr>
+        <tr>
+            <td>
+                value
+            </td>
+            <td>
+                radio的默认值
             </td>
             <td>
                 string
@@ -49,16 +62,16 @@
         </tr>
         <tr>
             <td>
-                string
+                disabled
             </td>
             <td>
-                设置输入框的默认值
+                radio的是否不可被选中
             </td>
             <td>
-                string
+                boolean
             </td>
             <td>
-                -
+                false
             </td>
         </tr>
         <tr>
@@ -66,7 +79,7 @@
                 handle
             </td>
             <td>
-                设置用户输入回车的回调函数
+                当radio触发onChange事件时执行回调
             </td>
             <td>
                 function
@@ -75,25 +88,10 @@
                 -
             </td>
         </tr>
-        <tr>
-            <td>
-                prefix
-            </td>
-            <td>
-                设置输入框前缀图标,规则类似icon
-            </td>
-            <td>
-                string
-            </td>
-            <td>
-                -
-            </td>
-        </tr>
     </tbody>
 </table>
 
----
-### Search
+### RadioGroup
 <table>
     <thead>
         <tr>
@@ -111,41 +109,13 @@
             </td>
         </tr>
     </thead>
-    <tbody>
+    <tbody/>
         <tr>
             <td>
-                type
+                name
             </td>
             <td>
-                设置输入框大小，有lg（大），sm（小）
-            </td>
-            <td>
-                string
-            </td>
-            <td>
-                -
-            </td>
-        </tr>
-        <tr>
-            <td>
-                placeholder
-            </td>
-            <td>
-                设置输入框的提示
-            </td>
-            <td>
-                string
-            </td>
-            <td>
-                -
-            </td>
-        </tr>
-        <tr>
-            <td>
-                string
-            </td>
-            <td>
-                设置输入框的默认值
+                给组内radio设置name属性
             </td>
             <td>
                 string
@@ -159,7 +129,127 @@
                 handle
             </td>
             <td>
-                设置用户输入回车的回调函数
+                当触发onChange事件时执行回调
+            </td>
+            <td>
+                function
+            </td>
+            <td>
+                -
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+### RadioButton
+<table>
+    <thead>
+        <tr>
+            <td>
+                属性
+            </td>
+            <td>
+                说明
+            </td>
+            <td>
+                类型
+            </td>
+            <td>
+                默认值
+            </td>
+        </tr>
+    </thead>
+    <tbody/>
+        <tr>
+            <td>
+                name
+            </td>
+            <td>
+                给radioButton设置name属性
+            </td>
+            <td>
+                string
+            </td>
+            <td>
+                -
+            </td>
+        </tr>
+        <tr>
+            <td>
+                defaultChecked
+            </td>
+            <td>
+                radioButton是否被选中
+            </td>
+            <td>
+                boolean
+            </td>
+            <td>
+                false
+            </td>
+        </tr>
+        <tr>
+            <td>
+                value
+            </td>
+            <td>
+                radioButton的默认值
+            </td>
+            <td>
+                string
+            </td>
+            <td>
+                -
+            </td>
+        </tr>
+        <tr>
+            <td>
+                disabled
+            </td>
+            <td>
+                radioButton是否不可被选中
+            </td>
+            <td>
+                boolean
+            </td>
+            <td>
+                false
+            </td>
+        </tr>
+        <tr>
+            <td>
+                first
+            </td>
+            <td>
+                radioButton是否为第一个元素
+            </td>
+            <td>
+                boolean
+            </td>
+            <td>
+                false
+            </td>
+        </tr>
+        <tr>
+            <td>
+                last
+            </td>
+            <td>
+                radioButton是否为最后一个元素
+            </td>
+            <td>
+                boolean
+            </td>
+            <td>
+                false
+            </td>
+        </tr>
+        <tr>
+            <td>
+                handle
+            </td>
+            <td>
+                radioButton的回调函数
             </td>
             <td>
                 function
